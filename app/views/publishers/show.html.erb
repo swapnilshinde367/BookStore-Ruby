@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<div class="detail_view">
+<p>
+  <strong>Id:</strong>
+  <%= @publisher.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @publisher.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @publisher.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @publisher.phone %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @publisher.address %>
+</p>
+
+<%= link_to 'Edit', edit_publisher_path(@publisher) %> |
+<%= link_to 'Delete', @publisher, method: :delete, data: { confirm: 'Are you sure ypu want to delete publisher?' } %> |
+<%= link_to 'Back', publishers_path %>
+</div>

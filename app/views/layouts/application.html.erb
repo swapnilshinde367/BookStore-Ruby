@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Log</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<table>
+	<tr class="menu_table">
+		<td>
+			<%= link_to 'Books', books_path %>
+		</td>
+		<td>
+			<%= link_to 'Authors', authors_path %>
+		</td>
+		<td>
+			<%= link_to 'Publishers', publishers_path %>
+		</td>
+	</tr>
+</table>
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<div class="detail_view">
+<p>
+  <strong>Id:</strong>
+  <%= @author.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @author.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @author.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @author.phone %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @author.address %>
+</p>
+<%= link_to 'Edit', edit_author_path(@author) %> |
+<%= link_to 'Delete', @author, method: :delete, data: { confirm: 'Are you sure you want to delete?' } %> |
+<%= link_to 'Back', authors_path %>
+</div>

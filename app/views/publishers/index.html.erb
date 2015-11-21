@@ -1,0 +1,35 @@
+<h1>Publishers</h1>
+
+<%= link_to 'Create New', new_publisher_path %>
+<br><br>
+
+<table>
+  <tbody>
+    <% if @publishers.present? %>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Address</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <% @publishers.each do |publisher| %>
+        <tr class="<%= cycle( 'odd_list', 'even_list' )%>">
+          <td><%= link_to publisher.id, publisher %></td>
+          <td><%= link_to publisher.name, publisher %></td>
+          <td><%= publisher.email %></td>
+          <td><%= publisher.phone %></td>
+          <td><%= publisher.address %></td>
+          <td><%= link_to 'Edit', edit_publisher_path(publisher) %> | <%= link_to 'Delete', publisher, method: :delete, data: { confirm: 'Are you sure ypu want to delete publisher?' } %></td>
+        </tr>
+      <% end %>
+    <% else %>
+      <span class="no_records" >
+        Oops, no publishers have been added.
+      </span>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<div class="detail_view">
+<p>
+  <strong>Id:</strong>
+  <%= @book.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @book.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @book.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @book.price %>
+</p>
+
+<p>
+  <strong>Published date:</strong>
+  <%= @book.published_date %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @book.author.name %>
+</p>
+
+<p>
+  <strong>Publisher:</strong>
+  <%= @book.publisher.name %>
+</p>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Delete', @book, method: :delete, data: { confirm: 'Are you sure you want to delete?' } %> | <%= link_to 'Back', books_path %>
+</div>
